@@ -22,21 +22,21 @@
 }
 
 .completedTodo {
-	background-color: unset;
-	border-color: gray;
-	color: gray;
+	background-color: rgb(233, 228, 228);
+	border-color: rgb(99, 93, 93);
+	color: rgb(99, 93, 93);
 }
 
 .todo.completedTodo .todoIcon,
 .todo.completedTodo .checkIcon,
 .todo.completedTodo .deleteIcon {
-	color: gray;
+	color: rgb(192, 189, 189);
 }
 
 .checkIcon,
 .deleteIcon {
 	cursor: pointer;
-	color: lightgrey;
+	color: rgb(153, 147, 147);
 	padding: 0 7px;
 	font-size: 1.8rem;
 	transition: transform 0.3s;
