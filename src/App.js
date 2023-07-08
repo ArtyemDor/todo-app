@@ -4,7 +4,7 @@ import TodosList from './src/Todos/TodosList'
 import TodoForm from './src/Todos/TodoForm'
 
 function App() {
-  const [todos, setTodos] = useState(['first', 'second'])
+  const [todos, setTodos] = useState([])
 
   const addTodoHandler = (text) => {
     setTodos([...todos, text])
@@ -17,8 +17,8 @@ function App() {
   return (
     <div className="App">
       <h1>React todo</h1>
-      <TodosList todos={todos} deleteTodo={deleteTodoHandler} />
       <TodoForm addTodo={addTodoHandler} />
+      <TodosList todos={todos} deleteTodo={deleteTodoHandler} />
     </div>
   )
 }
