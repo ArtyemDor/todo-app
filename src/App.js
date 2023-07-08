@@ -1,26 +1,50 @@
 import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
+
 import './App.css'
-import TodosList from './Todos/TodosList'
+import TodoActions from './Todos/TodoActions'
 import TodoForm from './Todos/TodoForm'
+import TodoList from './Todos/TodoList'
 
 function App() {
-  const [todos, setTodos] = useState([])
+	const [todos, setTodos] = useState([])
 
-  const addTodoHandler = (text) => {
-    setTodos([...todos, text])
-  }
+	const addTodoHandler = text => {
+		const newTodo = {
+			text,
+			isCompleted: false,
+			id: uuidv4()
+		}
 
-  const deleteTodoHandler = (index) => {
-    setTodos(todos.filter((todo, indexTodo) => index !== indexTodo))
-  }
+		setTodos([...todos, newTodo])
+	}
 
-  return (
-    <div className="App">
-      <h1>React todo</h1>
-      <TodoForm addTodo={addTodoHandler} />
-      <TodosList todos={todos} deleteTodo={deleteTodoHandler} />
-    </div>
-  )
+	const deleteTodoHandler = id => {
+		setTodos(todos.filter(todo => todo.id !== id))
+	}
+
+	const toggleTodoHandler = id => {
+		setTodos(
+			todos.map(todo => {
+				return id === todo.id
+					? { ...todo, isCompleted: !todo.isCompleted }
+					: { ...todo }
+			})
+		)
+	}
+
+	return (
+		<div className='App'>
+			<h1>React todo</h1>
+			<TodoForm addTodo={addTodoHandler} />
+			<TodoActions />
+			<TodoList
+				todos={todos}
+				deleteTodo={deleteTodoHandler}
+				toggleTodo={toggleTodoHandler}
+			/>
+		</div>
+	)
 }
 
 export default App
