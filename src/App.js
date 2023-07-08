@@ -49,16 +49,23 @@ function App() {
 		<div className='App'>
 			<h1>React todo</h1>
 			<TodoForm addTodo={addTodoHandler} />
-			<TodoActions
-				resetTodos={resetTodosHandler}
-				deleteCompletedTodos={deleteCompletedTodosHandler}
-				completedTodosExist={!!completedTodosCount}
-			/>
+			{todos.length > 0 && (
+				<TodoActions
+					resetTodos={resetTodosHandler}
+					deleteCompletedTodos={deleteCompletedTodosHandler}
+					completedTodosExist={!!completedTodosCount}
+				/>
+			)}
 			<TodoList
 				todos={todos}
 				deleteTodo={deleteTodoHandler}
 				toggleTodo={toggleTodoHandler}
 			/>
+			{completedTodosCount > 0 && (
+				<h1>{`You have completed ${completedTodosCount} ${
+					completedTodosCount === 1 ? 'todo' : 'todos'
+				}`}</h1>
+			)}
 		</div>
 	)
 }

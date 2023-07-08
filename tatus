@@ -1,0 +1,35 @@
+[33mcommit 8f149b7ef87ecbcf026833fd4a82e5d096d3dcc3[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Artyem Doronin <doronin.artyem@gmail.com>
+Date:   Sat Jul 8 17:09:07 2023 +0300
+
+    Todos-actions
+
+[33mcommit de2cf6c0167eb781965ec6840a3a638516475954[m
+Author: Artyem Doronin <doronin.artyem@gmail.com>
+Date:   Sat Jul 8 14:38:47 2023 +0300
+
+    correct tree
+
+[33mcommit 56175ec7d37a8a9877ebb932b860ee5f3451e520[m
+Author: Artyem Doronin <doronin.artyem@gmail.com>
+Date:   Sat Jul 8 14:35:43 2023 +0300
+
+    Todo-v1-styles
+
+[33mcommit 7477452f07e0f6fc3b2970f5785d9c604223f2a6[m
+Author: Artyem Doronin <doronin.artyem@gmail.com>
+Date:   Sat Jul 8 13:55:14 2023 +0300
+
+    add and delete function
+
+[33mcommit a65c4faddd448c4ca25ade178e9b7db74a975ff2[m
+Author: Artyem Doronin <doronin.artyem@gmail.com>
+Date:   Sat Jul 8 12:09:06 2023 +0300
+
+    first commit
+
+[33mcommit 32afa68d41606a0fa1d03bed041169ab62d15466[m
+Author: Artyem Doronin <doronin.artyem@gmail.com>
+Date:   Sat Jul 8 11:49:39 2023 +0300
+
+    Initialize project using Create React App
